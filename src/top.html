@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+    #Top{
+        width:100%;
+        height: 50px;
+        padding-left: 20px;
+        /* border:1px solid blue; */
+        background-color: #0B0E26;
+        border-bottom: 1px solid #1D395B;
+    }
+    #Top ul{
+        height: 50px;
+        line-height: 50px;
+        margin: 0px;
+        padding: 0px;
+        color: #709DBE;
+    }
+    #Top ul li{
+        list-style: none;
+        /* border:1px solid red; */
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        float: left;
+    }
+    #Top ul li img{
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    #Top ul li:not(:last-child){
+        margin-right: 30px;
+    }
+    #Top .left{
+        margin-left: 800px;
+    }
+    #time{
+        height: 15px;
+        /* line-height: 15px; */
+        width: 120px;
+        display: block;
+        margin-top:-10px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    #date, #week{
+        font-size: 12px;
+    }
+    </style>
+    <script>
+    //setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString();", 1000);
+    function getDatetime(){
+        var myDate = new Date();
+        var year=myDate.getFullYear(); 
+        var month=myDate.getMonth()+1;  
+        var date=myDate.getDate(); 
+        var hours = myDate.getHours();
+        var minutes = myDate.getMinutes();
+        var seconds = myDate.getSeconds();
+        if (hours<10) {
+            hours = '0'+hours
+        }
+        if (minutes<10) {
+            minutes = '0'+minutes
+        }
+        if (seconds<10) {
+            seconds = '0'+seconds
+        }
+        //console.log(year+"/"+month+"/"+date)
+        var str = "星期" + "日一二三四五六".charAt(new Date().getDay());
+        document.getElementById('time').innerHTML=hours+":"+minutes+":"+seconds;
+        document.getElementById('date').innerHTML=year+"/"+month+"/"+date;
+        document.getElementById('week').innerHTML=str;
+    }
+    
+    </script>
+</head>
+<body>
+    <div id="Top">
+        <ul>
+            <li><img src="img/logo.png"></li>
+            <li id="timebox">
+                <span id="time"></span>
+                <span id="date"></span>
+                <span id="week"></span>
+            </li>
+            <li class="left"><img src="img/icon_cloud.png">31℃  北风3级</li>
+            <li><img src="img/icon_wet.png">22</li>
+            <li><img src="img/icon_mp2.5.png">5</li>
+            <li><img src="img/icon_air.png">40</li>
+            <li><img src="img/icon_news_on.png">消息</li>
+            <li><img src="img/icon_id.png"> 我的</li>
+        </ul>
+    </div>
+</body>
+<script>
+ setInterval("getDatetime()",1000);
+ </script>
+</html>

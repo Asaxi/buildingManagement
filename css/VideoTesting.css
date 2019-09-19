@@ -1,0 +1,225 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #0B0E26;
+}
+#Content{
+    width: 1800px;
+    height: 850px;
+    margin:0px auto;
+    margin-top: 20px;
+    font-size: 14px;
+    background:url('../img/bg.png') no-repeat;
+    background-size:1800px 850px;
+    z-index: 2;
+}
+#left{
+    width: 1150px;
+    height: 750px;
+    margin: 50px 50px 0 100px;
+    float: left;
+    color: white;
+    /* border:1px solid red; */
+    border-right: 3px solid #23456A;
+}
+#Serach{
+    width: 1100px;
+    margin:0px auto;
+    text-align: center;
+}
+#searchbox{
+    display:inline-block;
+    position: relative;
+    width:300px;
+    height: 45px;
+    line-height: 50px;
+    float: left;
+    margin-top:15px;
+    padding-left:15px; 
+    color: white;
+    border:1px solid #1E9BD6; 
+    /* border: none; */
+    background-color: #10213E;
+}
+.searchbtn{
+    position: relative;
+    width: 16px;
+    height: 16px;
+    top:-30px;
+    right: 20px;
+    float:right;
+    background: url('../img/btn_search.png') no-repeat;
+    background-size: 16px 16px;
+    border: none;
+}
+ .btn {
+    float: left;
+    width:120px;
+}
+ .btn{
+    width:120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+    list-style: none;
+    border:1px solid #1E9BD6;
+    background-color: #10213E;
+}
+ .btn:before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    bottom: -1px;
+    top:-1px;
+    left:5%;
+    border-bottom: 1px solid #1D395B;
+    border-top: 1px solid #1D395B;
+}
+ .btn:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    left: -1px;
+    right:-1px;
+    top:10%;
+    border-left: 1px solid #1D395B;
+    border-right: 1px solid #1D395B;
+}
+.btn:not(:last-child){
+    margin-right: 20px;
+}
+#Serach ul{
+    width:120px;
+    float: left;
+}
+.btn ul li{
+    margin-left:-40px;
+    margin-top: 10px;
+    display: none;
+}
+#Serach ul li:hover ul li{
+    background-color: #1E9BD6;
+    display: block;
+}
+#options .boxcs{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+}
+#options {
+    width: 200px;
+    height: 100px;
+    float: right;
+}
+#options p{
+    width: 200px;
+    height: 25px;
+    text-align: left;
+    line-height: 25px;
+}
+#options p img{
+    margin-right: 15px;
+    vertical-align: middle;
+}
+#right{
+    width:400px;
+    height: 800px;
+    float: left;
+    color: white;
+    margin:0px;
+    margin-top:50px;
+    /* border: 3px solid #1D395B; */
+}
+#right p:first-child{
+    width: 400px;
+    padding-left: 10px;
+    border-left: 4px solid #1E9BD6;
+}
+#right p:not(:first-child){
+    width: 400px;
+    text-align: center;
+}
+#right p:nth-child(2){
+    margin-bottom: 10px;
+}
+#VideoList{
+    height: 650px;
+    overflow: hidden;
+}
+#VideoList .VideoList{
+    width: 300px;
+    height: 150px;
+    margin: 0px auto;
+    margin-bottom: 15px;
+    /* border: 1px solid red; */
+} 
+.VideoList span:nth-child(1){
+    width: 40px;
+    height: 40px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    /* border: 1px solid green; */
+}
+.VideoList span:nth-child(2){
+    width: 245px;
+    height: 150px;
+    display: block;
+    float: left;
+    border: 1px solid gold;
+}
+#Models{
+    width:1100px;
+    height: 650px;
+    float: left;
+    border:1px solid gold;
+}
+/* 边框按钮 */
+#topbtn{
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+    background: url('../img/btn_top.png') no-repeat;
+    background-size: 300px 40px;
+    margin-left:150px;
+    margin-top: -18px;
+    z-index: 1;
+}
+#leftbtn{
+    position:absolute;
+    width: 50px;
+    height: 260px;
+    margin-top:100px;
+    margin-left: -5px;
+}
+#leftbtn span{
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 0px auto;
+    width: 20px;
+    height: 130px;
+    line-height: 14px;
+    padding-top:20px;
+}
+#leftbtn div:nth-child(1){
+    width: 50px;
+    height: 125px;
+    background: url('../img/btn_normal.png') no-repeat;
+    background-size: 50px 130px;
+}
+#leftbtn div:nth-child(2){
+    width: 50px;
+    height: 130px;
+    margin-top:-30px;
+    background: url('../img/btn_selected.png') no-repeat;
+    background-size: 50px 130px;
+}
